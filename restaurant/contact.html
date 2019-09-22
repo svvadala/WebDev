@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+Name: Steven Vadala
+Date Created: 9/22/2019
+Most recent revision: 9/22/2019
+-->
+<html lang="en">
+    <head>
+        <title>Contact Us</title>
+        <link href="./styles/contact.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <main>
+            <header>
+                <h1 id= "scsName">Scuba's Grub Shack</h1>
+            </header>
+
+            <nav >
+                <hr />
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <hr />
+            </nav>
+            <div id= "formStyle">
+              <!-- Name(Line) -->
+              <label for="fName">Name:</label>
+              <input type="text" id="fName" name="fName"> <br />
+              <!-- Email(Line) -->
+              <label for="email">Email:</label>
+              <input type="Email" id="email" name="email"> <br />
+              <!-- Phone(Line) -->
+              <label for="phoneNum">Phone:</label>
+              <input type="Phone" id="phoneNum" name="phoneNum"> <br />
+              <!-- Reason(Drop) -->
+              <label for="inquiry">Reason for Inquiry:</label>
+                <select id="inquiry" name="inquiry">
+                <option value="catering" selected>Catering</option>
+                <option value="private">Private Party</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+              </select><br />
+              <!-- Additional(Box) -->
+              <p class="vertAlign">
+              <label for="info">Additional Information:</label>
+              <textarea id="info" name="info"></textarea><br />
+              </p>
+              <!-- HYBTR(Radio) -->
+                Have you been to the restuarant?
+                <input type="radio" id="choice2" name="questionnaire" value="no">
+                <label for="choice2">No</label>
+                <input type="radio" id="choice1" name="questionnaire" value="yes">
+                <label for="choice1">Yes</label><br />
+              <!-- BDTC(Checkbox) -->
+                Best days to contact you:
+                <input type="checkbox" id="monday" name="contact" value="monday">
+                <label for="monday">M</label>
+                <input type="checkbox" id="tuesday" name="contact" value="tuesday">
+                <label for="tuesday">T</label>
+                <input type="checkbox" id="wednesday" name="contact" value="wednesday">
+                <label for="wednesday">W</label>
+                <input type="checkbox" id="thursday" name="contact" value="thursday">
+                <label for="thursday">Th</label>
+                <input type="checkbox" id="friday" name="contact" value="friday">
+                <label for="friday">F</label><br />
+              <!-- Button  -->
+              <input type="submit" name="submit" value="Send Request">
+
+            </div>
+
+            <footer> <!-- The footer is a block at the bottom of the page. -->
+                <hr />
+                <p>421 Cowboys Lane, Charlotte, NC, 28227</p>
+                <p>419-202-1546</p>
+            </footer>
+        </main>
+    </body>
+</html>
