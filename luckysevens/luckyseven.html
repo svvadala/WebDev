@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<!--
+    Name: Steven Vadala
+    Date Created: 9/27/2019
+    Most recent revision: 9/27/2019
+-->
+<html lang="en">
+    <head>
+        <title>Lucky Seven</title>
+        <link rel="stylesheet" type="text/css" href="./lucky.css">
+    </head>
+    <body>
+		<main>
+			<header>
+				<h1>Lucky Seven</h1>
+			</header>
+			<section id="pre-game">
+				<div>
+					<label class="center" for="startBet"><h2>Starting Bet:</h2></label>
+					<input type="text" name="startBet" id="startBet" value="0"/>
+				</div>
+				<button class="btn" type="button"  onclick="playGame();" id="playbtn">Play</button>
+			</section>
+			<section id="results" style="display:none;">
+				<h1 style="text-align:center;">Results</h1>
+				<table>
+					<tbody>
+						<tr>
+						  <td>Starting Bet</td>
+						  <td id="start-bet"></td>
+						</tr>
+						<tr>
+						  <td>Total Rolls Before Going Broke</td>
+						  <td id="total-rolls"></td>
+						</tr>
+						<tr>
+						  <td>Highest Amount Won</td>
+						  <td id="highest-amount"></td>
+						</tr>
+						<tr>
+						  <td>Roll Count at Highest Amount Won</td>
+						  <td id="roll-count-highest"></td>
+						</tr>
+					</tbody>
+				</table>
+				<br/>
+				<button class="btn" type="button" onclick="resetGame();" id="reset">Replay</button>
+			</section>
+		</main>
+        <script src="luckyseven.js"></script>
+    </body>
+</html>

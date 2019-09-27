@@ -1,0 +1,51 @@
+@font-face {
+   font-family: casinoStyle;
+   src: url(./Las.ttf);
+}
+body{
+
+        max-width: 1000px;
+				margin:25px;
+				padding-bottom:25px;
+				border: 5px solid grey;
+				border-radius:8px;
+        background-image: url("lucky-seven.png");
+        background-size: 1000px;
+        color: red;
+			}
+header{
+        font-family: casinoStyle;
+        color: red;
+				height: 100px;
+				text-align: center;
+				padding: 30px 10px 20px 10px;
+			}
+button{
+				display:block;
+				margin:auto;
+				padding:10px 20px;
+
+				background-color:grey;
+				border-radius:3px;
+			}
+button:hover{
+				background-color:red;
+			}
+h1{
+				font-size: 2.5em;
+        color: red;
+			}
+h2{
+        color: red;
+      }
+table,td{
+				border: 5px solid grey;
+				border-collapse: collapse;
+				width:80%;
+				margin:auto;
+        font-family: monospace;
+        background-color: black;
+			}
+table,th,td{
+			  padding: 10px 0px 10px 20px;
+			}
