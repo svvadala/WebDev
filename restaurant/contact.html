@@ -7,75 +7,174 @@ Most recent revision: 9/22/2019
 <html lang="en">
     <head>
         <title>Contact Us</title>
-        <link href="./styles/contact.css" rel="stylesheet" type="text/css">
+        <link href="./styles/restaurantStyles.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     </head>
+    <style>
+    #formStyle
+    {
+      text-align: center;
+      padding-top: 10px;
+    }
+    .vertAlign *
+    {
+      vertical-align: top;
+    }
+    body
+    {
+      background-color: grey;
+    }
+    form
+    {
+			background-color:white;
+			Font-family:"Times New Roman", Times, serif;
+			font-size:1.2em;
+			border:2px solid lightgrey;
+			margin:20px;
+			padding:30px;
+		}
+
+    </style>
 
     <body>
-        <main>
-            <header>
-                <h1 id= "scsName">Scuba's Grub Shack</h1>
-            </header>
+      <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-            <nav >
-                <hr />
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-                <hr />
-            </nav>
-            <div id= "formStyle">
-              <!-- Name(Line) -->
-              <label for="fName">Name:</label>
-              <input type="text" id="fName" name="fName"> <br />
-              <!-- Email(Line) -->
-              <label for="email">Email:</label>
-              <input type="Email" id="email" name="email"> <br />
-              <!-- Phone(Line) -->
-              <label for="phoneNum">Phone:</label>
-              <input type="Phone" id="phoneNum" name="phoneNum"> <br />
-              <!-- Reason(Drop) -->
-              <label for="inquiry">Reason for Inquiry:</label>
-                <select id="inquiry" name="inquiry">
-                <option value="catering" selected>Catering</option>
-                <option value="private">Private Party</option>
-                <option value="feedback">Feedback</option>
-                <option value="other">Other</option>
-              </select><br />
-              <!-- Additional(Box) -->
-              <p class="vertAlign">
-              <label for="info">Additional Information:</label>
-              <textarea id="info" name="info"></textarea><br />
-              </p>
-              <!-- HYBTR(Radio) -->
-                Have you been to the restuarant?
-                <input type="radio" id="choice2" name="questionnaire" value="no">
-                <label for="choice2">No</label>
-                <input type="radio" id="choice1" name="questionnaire" value="yes">
-                <label for="choice1">Yes</label><br />
-              <!-- BDTC(Checkbox) -->
-                Best days to contact you:
-                <input type="checkbox" id="monday" name="contact" value="monday">
-                <label for="monday">M</label>
-                <input type="checkbox" id="tuesday" name="contact" value="tuesday">
-                <label for="tuesday">T</label>
-                <input type="checkbox" id="wednesday" name="contact" value="wednesday">
-                <label for="wednesday">W</label>
-                <input type="checkbox" id="thursday" name="contact" value="thursday">
-                <label for="thursday">Th</label>
-                <input type="checkbox" id="friday" name="contact" value="friday">
-                <label for="friday">F</label><br />
-              <!-- Button  -->
-              <input type="submit" name="submit" value="Send Request">
+       <header class="jumbotron shadow p-3 mb-5 rounded">
+           <h1 id= "scsName">Scuba's Grub Shack</h1>
+       </header>
+       <nav >
+           <ul>
+               <li><a class="btn badge-pill fa fa-home" href="index.html"></a></li>
+               <li><a class="btn badge-pill" href="menu.html">Menu</a></li>
+               <li><a class="active btn badge-pill" href="contact.html">Contact Us</a></li>
+           </ul>
+       </nav>
+       <noscript>This content is best viewed in JavaScript.</noscript>
+      <main>
+        <script type="text/javascript">
+        (function() {
+		  'use strict';
+		  window.addEventListener('load', function() {
+			// Fetch all the forms we want to apply custom Bootstrap validation styles to
+			var forms = document.getElementsByClassName('custom-validate');
+			// Loop over them and prevent submission
+			var validation = Array.prototype.filter.call(forms, function(form) {
+			  form.addEventListener('submit', function(event) {
+				if (form.checkValidity() === false) {
+				  event.preventDefault();
+				  event.stopPropagation();
+				}
+				form.classList.add('was-validated');
+			  }, false);
+			});
+		  }, false);
+		})();
+		</script>
+        <!-- Begining of body container-->
 
-            </div>
+<div class="container">
+  <form class="d-block custom-validate shadow" novalidate>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Name" required>
+      <div class="invalid-feedback">
+        Please enter your Name.
+      </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Email</label>
+        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" id="inputEmail4" placeholder="Email" required>
+        <div class="invalid-feedback">
+        Please provide valid email.
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPhone">Phone</label>
+        <input type="tel" pattern="^\d{3}-\d{3}-\d{4}$" class="form-control" id="inputPhone" placeholder="Phone" required>
+        <div class="invalid-feedback">
+        Please enter a valid Phone Number (XXX-XXX-XXXX).
+        </div>
+      </div>
+     </div>
+      <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inquiry">Reason for Inquiry</label>
+        <select id="inquiry" class="form-control" required>
+        <option selected>Catering</option>
+        <option value="party">Private Party</option>
+        <option value="feedback">Feedback</option>
+        <option value="other">Other</option>
+        </select>
+      </div>
+      </div>
+      <div class="form-row">
+      <div class="form-group col-lg-8">
+        <label for="addtional-info">Additional Info</label>
+        <textarea class="form-control" id="addtional-info" rows="3"></textarea>
+      </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+        <legend class="col-form-label">Have you been to the restaurant?</legend>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="hasVisited" id="hasVisitedYes" value="option1" required>
+          <label class="form-check-label" for="hasVisitedYes">
+          Yes
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="hasVisited" id="hasVisitedNo" value="option2" required>
+          <label class="form-check-label" for="hasVisitedNo">
+          No
+          </label>
+        </div>
+        <div class="invalid-feedback">
+        Please check one.
+        </div>
+        </div>
+     </div>
+      <div class="form-group">
+      <legend class="col-form-label">Best days to contact you:</legend>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" name="available" id="mon" value="option1" >
+        <label class="form-check-label" for="mon">M</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" name="available" id="tue" value="option2" >
+        <label class="form-check-label" for="tue">T </label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" name="available" id="wed" value="option3" >
+        <label class="form-check-label" for="wed">W</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" name="available" id="thurs" value="option4" >
+        <label class="form-check-label" for="thurs">Th </label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" name="available" id="fri" value="option5" >
+        <label class="form-check-label" for="fri">F</label>
+      </div>
+     </div>
+     <hr/>
+      <button type="submit" class="btn btn-primary d-block">Send Request</button>
+    </div>
+  </form>
 
-            <footer> <!-- The footer is a block at the bottom of the page. -->
-                <hr />
-                <p>421 Cowboys Lane, Charlotte, NC, 28227</p>
-                <p>419-202-1546</p>
-            </footer>
+
         </main>
+        <footer> <!-- The footer is a block at the bottom of the page. -->
+            <hr />
+            <p>421 Cowboys Lane, Charlotte, NC, 28227</p>
+            <p>419-202-1546</p>
+        </footer>
     </body>
+
 </html>

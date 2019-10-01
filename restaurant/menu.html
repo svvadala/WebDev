@@ -7,88 +7,158 @@ Most recent revision: 9/22/2019
 <html lang="en">
     <head>
         <title>Menu</title>
-        <link href="./styles/menu.css" rel="stylesheet" type="text/css">
+        <link href="./styles/restaurantStyles.css" rel="stylesheet" type="text/css">
+
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     </head>
-
+    <style>
+    article{
+			background-color: rgba(0, 35, 210,.7);
+			text-align: center;
+			margin: 20px;
+			padding: 40px;
+		}
+		.sub-heading{
+			font-weight: bold;
+		}
+		section{
+			margin-top: 50px;
+			margin-bottom:50px;
+		}
+		table{
+			border: 1px solid lightgrey;
+			border-collapse: collapse;
+			width:80%;
+			margin:auto;
+		}
+		th{
+			background-color: black;
+			color:white;
+			font-size:1.5em;
+		}
+		td{
+			font-size:1.5em;
+		}
+		table,th,td{
+			  padding: 10px 0px 10px 20px;
+			 Font-family:"Times New Roman", Times, serif;
+		}
+		tr:nth-child(odd) {
+			background-color: rgba(0, 35, 210,.7);
+		}
+		tr:nth-child(even) {
+			background-color: rgba(255, 255, 255,.6);
+		}
+    h2
+    {
+      text-align: center;
+      font-size: 50px;
+    }
+    </style>
     <body>
-        <main>
-            <header>
-                <h1 id= "scsName">Scuba's Grub Shack</h1>
-            </header>
+      <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-            <nav >
-                <hr />
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-                <hr />
-            </nav>
-            <div>
-                  <table>
-                    <tr>
-                      <td><strong>Burger and Fries</strong><br />
-                          An American Classic!<br />
-                          Your choice - with or without cheese<br />
-                          Pickle, onion, tomato, and lettuce<br />
-                          Served with our famous thick cut<br />
-                          french fries<br />
-                          $7.95
-                      </td>
-                      <td>
-                        <strong>Hot Dog and Chips</strong><br />
-                        A Summer Classic!<br />
-                        Your choice - wihte or wheat bun<br />
-                        Relish, mustard, and ketchup<br />
-                        Served with our house-made chips<br />
-                        $7.95
-                      </td>
-                      <td>
-                        <strong>Italian Sausage and Peppers</strong><br />
-                        An All-Time Favorite!<br />
-                        Your choice - mild or spicy Cole Slaw<br />
-                        Served with garlic mashers<br />
-                        $10.95
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <strong>Tenderlion Sandwhich and Chips</strong><br />
-                        Really Hits the Spot!<br />
-                        Plain or Sesane Seed Bun<br />
-                        Pickle, onion, tomato, and lettuce<br />
-                        Served with our house-made chips<br />
-                        $8.95
-                      </td>
-                      <td>
-                        <strong>House Salad</strong><br />
-                        On the Lighter Side<br />
-                        Your choice - with or without cheese<br />
-                        Iceberg lettuce, tomatoes, peppers<br />
-                        Thousand Island or Ranch<br />
-                        Dressing Served with a dinner roll<br />
-                        $6.95
-                      </td>
-                      <td>
-                        <strong>Brisket Sandwich and Fries</strong><br />
-                        A Taste of Texas!<br />
-                        Smoked Brisket on thick-cut<br />
-                        Texas Toast<br />
-                        Cole Slaw<br />
-                        Served with our famous thick-cut<br />
-                        french fries<br />
-                        $7.95
-                      </td>
-                    </tr>
-                  </table>
-            </div>
+       <header class="jumbotron shadow p-3 mb-5 rounded">
+           <h1 id= "scsName">Scuba's Grub Shack</h1>
+       </header>
+       <nav >
+           <ul>
+               <li><a class="btn badge-pill fa fa-home" href="index.html"></a></li>
+               <li><a class="active btn badge-pill" href="menu.html">Menu</a></li>
+               <li><a class="btn badge-pill" href="contact.html">Contact Us</a></li>
+           </ul>
+       </nav>
+       <noscript>This content is best viewed in JavaScript.</noscript>
+      <main>
+          <h2>Menu</h2>
+          <section>
+      <div class="row justify-content-center">
+        <article class="col-lg-3 col-md-4" id="burger-fries">
+          <h2><em>Burger and Fries</em></h2>
+          <p class="sub-heading">An American Classic!</p>
+          <p>Your choice- with or without cheese Pickle, onion, tomato, and lettuce Served with our famous thick cut french fries</p>
+          <p id="price bf-price">$7.95</p>
+        </article>
+        <article class="col-lg-3 col-md-4" id="hotdog-chips">
+          <h2><em>Hot Dog and Chips</em></h2>
+          <p class="sub-heading">A Summer Classic!</p>
+          <p>Your choice- white or wheat bun Relish, mustard, and ketchip Served with our house-made chips</p>
+          <p class="price hc-price">$7.95</p>
+        </article>
+        <article class="col-lg-3 col-md-4" id="sausage-peppers">
+          <h2><em>Italian Sausage and Peppers</em></h2>
+          <p class="sub-heading">An All-Time Favorite!</p>
+          <p>Your choice- mild or spicy Cole Slaw Served with garlic mashers</p>
+          <p class="price sp-price">$10.95</p>
+        </article>
+        <article class="col-lg-3 col-md-4" id="sandwich-chips">
+          <h2><em>Tenderloin Sandwich and Chips</em></h2>
+          <p class="sub-heading">Really Hits the Spot!</p>
+          <p>Plain or Sesame Seed Bun Pickle, onion, tomato, and lettuce Served with our house-made chips</p>
+           <p class="price sc-price">$8.95</p>
+        </article>
+        <article class="col-lg-3 col-md-4" id="house-salad">
+          <h2><em>House Salad</em></h2>
+          <p class="sub-heading">On the Lighter Side!</p>
+          <p>Your choice- with or without cheese Iceburg lettuce, tomatoes, peppers Thousand Island or Ranch Dressing Served with a dinner roll</p>
+          <p class="price hs-price">$6.95</p>
+        </article>
+        <article class="col-lg-3 col-md-4" id="sandwich-fries">
+          <h2><em>Brisket Sandwich and Fries</em></h2>
+          <p class="sub-heading">A Taste of Texas!</p>
+          <p>Smoked Brisket on thick-cut Texas Toast Cole Slaw Served with our famous thick-cut french fries</p>
+          <p class="price sf-price">$7.95</p>
+        </article>
+      </div>
+    </section>
+    <!-- Beverages table-->
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">Beverages</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Root Beer</td>
+            <td>$3.00</td>
+          </tr>
+          <tr>
+            <td>Bottled Water</td>
+            <td>$1.25</td>
+          </tr>
+          <tr>
+            <td>Lemonade</td>
+            <td>$1.00</td>
+          </tr>
+          <tr>
+            <td>Iced Tea</td>
+            <td>$1.25</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-            <footer> <!-- The footer is a block at the bottom of the page. -->
-                <hr />
-                <p>421 Cowboys Lane, Charlotte, NC, 28227</p>
-                <p>419-202-1546</p>
-            </footer>
+
+
+
+
+      </div>
+
+
         </main>
+        <footer> <!-- The footer is a block at the bottom of the page. -->
+            <hr />
+            <p>421 Cowboys Lane, Charlotte, NC, 28227</p>
+            <p>419-202-1546</p>
+        </footer>
     </body>
+
 </html>

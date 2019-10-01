@@ -1,0 +1,63 @@
+@font-face {
+   font-family: tropicStyle1;
+   src: url(./break.otf);
+}
+/* * {
+   margin: 15px;
+   padding: 0px;
+} */
+
+header
+{
+  background-color: white;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+footer
+{
+
+    background-color: white;
+    height: 100px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+ul
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li
+{
+  display: inline;
+}
+li a:hover:not(.active) {
+  font-weight: bold;
+}
+.active {
+  background-color: #4CAF50;
+  text-decoration: none;
+}
+/* a:link, a:visited {
+  color: pink;
+} */
+#scsName
+{
+  text-align: center;
+  font-family: tropicStyle1;
+  font-size: 55px;
+}
+nav
+{
+    border-bottom: thin #5b7d87 solid;
+    padding-bottom: 5px;
+}
+nav .btn
+{
+  background-color: black;
+  color: white;
+}
